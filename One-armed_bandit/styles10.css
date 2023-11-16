@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('Background.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slot-machine {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .reel {
+    width: 100px;
+    height: 150px;
+    border: 5px solid rgb(233, 159, 21);
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    box-shadow: 0 0 10px 8px rgba(30, 30, 32, 0.37);
+  }
+
+  #username-display{
+    text-align: center;
+    margin: 10px;
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffff00, 0 0 80px #ffff00, 0 0 90px #ffff00, 0 0 100px #ffff00, 0 0 150px #ffff00;
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  button {
+    background-color: #fcfcfc;
+    box-shadow: 0 0 10px 8px rgba(255, 255, 255, 0.37);
+    color: #000000;
+    margin: 20px;
+    padding: 10px 10px; 
+    border: none; 
+    border-radius: 25px; 
+    font-size: 20px; 
+    cursor: pointer;
+}
+
+button:active {
+    transform: translateY(4px); /* Зміщення кнопки при натисканні */
+    transition: transform 0.2s ease; /* Анімація зміни положення */
+  }
