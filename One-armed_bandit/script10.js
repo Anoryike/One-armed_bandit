@@ -47,6 +47,9 @@ function startGame() {
     
         if (symbolsMatch) {
             win = true;
+            reels.forEach(reel => {
+              reel.querySelector('img').classList.add('pulse-animation')
+            });
             setTimeout(endGame, 500);
             return; // Зупиняємо виконання решти коду у функції playRound(), якщо є виграш
         }
@@ -60,7 +63,10 @@ function startGame() {
         iterations = 0;
         win = false;
         const reels = document.querySelectorAll('.reel');
-        reels.forEach(reel => reel.querySelector('img').src = ''); // Очистити картинки на барабанах
+        reels.forEach(reel => {
+          reel.querySelector('img').src = '';
+          reel.querySelector('img').classList.remove('pulse-animation'); // Забрати клас пульсації
+        }); // Очистити картинки на барабанах
     }
   
     // Зупинка гри та показ результату
